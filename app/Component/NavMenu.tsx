@@ -42,7 +42,7 @@ export default function App() {
 
       {/* Hamburger Menu Items (Mobile) */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-3/4 h-screen bg-white dark:bg-gray-800 shadow-lg p-4 sm:hidden">
+        <div className="absolute top-0 left-0 w-3/4 h-screen bg-white shadow-lg p-4 sm:hidden">
           <div className="flex justify-end mb-4">
             <IoClose className="text-2xl cursor-pointer" onClick={toggleMenu} />
           </div>
@@ -61,7 +61,7 @@ export default function App() {
                 }`}
               >
                 <Link href={item.path} onClick={() => setIsMenuOpen(false)}>
-                  <span className="text-gray-900 dark:text-white">{item.label}</span>
+                  <span className="text-gray-900 ">{item.label}</span>
                 </Link>
               </NavbarItem>
             ))}
@@ -90,7 +90,7 @@ export default function App() {
               }`}
             >
               <Link href={item.path}>
-                <span className="text-gray-900 dark:text-white">{item.label}</span>
+                <span className="text-gray-900 ">{item.label}</span>
               </Link>
             </NavbarItem>
           ))}
