@@ -56,7 +56,7 @@ const ServicesSec = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="p-6 border border-btncolor rounded-lg shadow-sm text-start space-y-4"
+            className="p-6  rounded-lg  text-start space-y-4"
           >
             {/* Service Icon */}
             <div className="flex justify-start">
