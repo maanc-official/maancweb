@@ -49,10 +49,10 @@ export default function App() {
           <div className="flex flex-col gap-4">
             {[
               { path: "/", label: "Home" },
-              { path: "/offerings", label: "Offerings" },
-              { path: "/about", label: "About" },
-              { path: "/joinUs", label: "Join Us" },
-              { path: "/contactUs", label: "Contact Us" },
+              { path: "/Offerings", label: "Offerings" },
+              { path: "/About", label: "About" },
+              { path: "/JoinUs", label: "Join Us" },
+              { path: "/ContactUs", label: "Contact Us" },
             ].map((item, index) => (
               <NavbarItem
                 key={index}
@@ -78,10 +78,10 @@ export default function App() {
         <NavbarContent className="flex gap-4">
           {[
             { path: "/", label: "Home" },
-            { path: "/offerings", label: "Offerings" },
-            { path: "/about", label: "About" },
-            { path: "/joinUs", label: "Join Us" },
-            { path: "/contactUs", label: "Contact Us" },
+            { path: "/Offerings", label: "Offerings" },
+            { path: "/About", label: "About" },
+            { path: "/JoinUs", label: "Join Us" },
+            { path: "/ContactUs", label: "Contact Us" },
           ].map((item, index) => (
             <NavbarItem
               key={index}

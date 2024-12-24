@@ -3,7 +3,15 @@ import React from 'react'
 
 const ContactUs  = () => {
   return (
-    <div>ContactUs page</div>
+
+    <>
+    <div>
+      <p>krefjiowtgjfdiokgtrfjvgktorfjgtkifedvjgtirfhgtuefdhngtrjfhntgrjfvdhrfudsjghfvrdjwgtefndgtrijfdbgtrfhjghfvduijgfrhvdugijvhgfr</p>
+      
+    </div>
+    
+    </>
+    
   )
 }
 
