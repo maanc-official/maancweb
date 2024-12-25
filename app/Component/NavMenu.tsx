@@ -28,7 +28,7 @@ export default function App() {
   return (
     <Navbar className="w-full px-4 sm:px-8">
       {/* Navbar for Mobile */}
-      <div className="flex items-center justify-between sm:hidden w-full mt-9">
+      <div className="flex items-center justify-between sm:hidden w-full mt-9 ">
         {/* Hamburger Icon */}
         <div onClick={toggleMenu} className="cursor-pointer text-2xl">
           {isMenuOpen ? <IoClose /> : <AiOutlineMenu />}

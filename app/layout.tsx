@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavMenu from "./Component/NavMenu";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,10 +28,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="absolute w-full flex justify-center">
-          <NavMenu/>
+        {/* Fixed Navbar */}
+        <div className="fixed top-0 left-0 w-full z-50">
+          <NavMenu />
         </div>
-        {children}
+
+        {/* Main Content */}
+        <div className="pt-[70px]"> {/* Adjust `pt` to match the navbar height */}
+          {children}
+        </div>
       </body>
     </html>
   );
