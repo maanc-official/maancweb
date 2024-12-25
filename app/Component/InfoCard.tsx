@@ -5,7 +5,7 @@ const InfoCards = () => {
   return (
     <>
     <div className="h-[100svh] w-full bg-black">
-
+      
     </div>
     </>
   );
