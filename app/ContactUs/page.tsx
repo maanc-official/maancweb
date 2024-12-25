@@ -7,7 +7,7 @@ const ContactUs  = () => {
     
    
      
-     <div className="h-[100svh] w-full bg-red-600  pt-[64px]">
+     <div className="h-[100svh] w-full   ">
 
       <h1>Contact us</h1>
       
