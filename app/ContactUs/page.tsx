@@ -4,13 +4,18 @@ import React from 'react'
 const ContactUs  = () => {
   return (
 
-    <>
-    <div>
-      <p>krefjiowtgjfdiokgtrfjvgktorfjgtkifedvjgtirfhgtuefdhngtrjfhntgrjfvdhrfudsjghfvrdjwgtefndgtrijfdbgtrfhjghfvduijgfrhvdugijvhgfr</p>
-      
-    </div>
     
-    </>
+   
+     
+     <div className="h-[100svh] w-full bg-red-600  pt-[64px]">
+
+      <h1>Contact us</h1>
+      
+      </div>
+      
+
+    
+  
     
   )
 }
