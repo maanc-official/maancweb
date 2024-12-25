@@ -1,8 +1,8 @@
 "use client";
 
-import HeroSec from "./Component/HeroSec";
-import InfoCards from "./Component/InfoCard";
-import ServiceSec from "./Component/ServiceSec";
+import HeroSec from "./Component/HomeComp/HeroSec";
+import InfoCards from "./Component/HomeComp/InfoCard";
+import ServiceSec from "./Component/HomeComp/ServiceSec";
 
 
 
