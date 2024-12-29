@@ -43,16 +43,16 @@ const ServicesSec = () => {
   ];
 
   return (
-    <div className="w-full h-[100svh] px-6 py-10 md:px-20 lg:px-32">
+    <div className="w-full h-auto lg:h-[100svh] px-6 py-10 md:px-20 lg:px-32 items-center justify-center  ">
       {/* Section Title */}
-      <div className="text-start mb-12">
+      <div className="text-start mb-9 items-center justify-center ">
         <h2 className="text-3xl md:text-4xl font-bold">
-          Our <span className="text-red-500">Services</span>
+          Our <span className="text-btncolor">Services</span>
         </h2>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
         {services.map((service, index) => (
           <div
             key={index}
