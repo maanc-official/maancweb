@@ -33,6 +33,10 @@ export default {
         foreground: 'var(--foreground)',
         btncolor: '#FF5151',
       },
+      boxShadow: {
+        'custom-inner': 'inset 2.78px 2.78px 3.06px rgba(0, 0, 0, 0.25)',
+        'custom-large': '8.33px 8.33px 11.11px 5.56px rgba(0, 0, 0, 0.25)', // Replace the RGBA value with your desired color.
+      },
     },
   },
   plugins: [nextui(), MyClass],
