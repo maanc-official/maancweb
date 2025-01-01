@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react"
 import {HoverEffect} from "@/app/Component/Boxes";
-import {HoverBorderGradient} from "@/app/Component/MovingBorder";
+
 const InfoCards = () => {
   
   
