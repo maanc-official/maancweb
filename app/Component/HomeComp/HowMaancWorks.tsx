@@ -44,7 +44,7 @@ const HowMaancWorks: React.FC = () => {
         {steps.map((step, index) => (
           <React.Fragment key={index}>
             {/* Card */}
-            <div className="group relative w-[280px] h-[400px] md:w-[300px] md:h-[450px] perspective">
+            <div className="group relative w-[280px] h-[400px] md:w-[300px] md:h-[400px] perspective">
               <div className="relative w-full h-full transform-gpu group-hover:rotate-y-180 transition-transform duration-1000 preserve-3d">
                 {/* Front (Title + Background Color Red) */}
                 <div className="absolute inset-0 flex justify-center items-center bg-btncolor rounded-lg shadow-lg backface-hidden">

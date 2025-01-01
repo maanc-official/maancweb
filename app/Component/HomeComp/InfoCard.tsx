@@ -1,15 +1,62 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react"
+import {HoverEffect} from "@/app/Component/Boxes";
 const InfoCards = () => {
+  const items = [
+    {
+      title: "Web Development",
+      description:
+        "Build robust and scalable websites tailored to your business needs using cutting-edge technologies.",
+      icon: "/web.svg", // Replace with the actual path to the icon
+      link: "https://stripe.com",
+    },
+    {
+      title: "Mobile Application",
+      description:
+        "Create user-friendly mobile apps for Android and iOS platforms that provide seamless experiences.",
+      icon: "/mobileapp.svg", // Replace with the actual path to the icon
+      link: "https://netflix.com",
+    },
+    {
+      title: "Digital Marketing",
+      description:
+        "Enhance your online presence and drive traffic with our strategic digital marketing solutions.",
+      icon: "/dm.svg", // Replace with the actual path to the icon
+      link: "https://google.com",
+    },
+    {
+      title: "CRM",
+      description:
+        "Streamline your customer relationships with powerful and intuitive CRM solutions.",
+      icon: "/crm.svg", // Replace with the actual path to the icon
+      link: "https://meta.com",
+    },
+    {
+      title: "Graphics Designing",
+      description:
+        "Bring your ideas to life with stunning and innovative graphic designs that captivate your audience.",
+      icon: "/gd.svg", // Replace with the actual path to the icon
+      link: "https://amazon.com",
+    },
+    {
+      title: "AI & ML",
+      description:
+        "Leverage the power of Artificial Intelligence and Machine Learning to automate and innovate.",
+      icon: "/ai.svg", // Replace with the actual path to the icon
+      link: "https://microsoft.com",
+    },
+  ];
+  
   return (
     <>
-    <div className="h-[100svh] w-full bg-black">
-    <motion.div
-            style={{ height: "500px", width: "500px", backgroundColor: "white" }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1 }}
-        />
+    <div className="lg:h-[100svh] w-full  lg:px-28 bg-black">
+    {/* <div className="text-start mb-9 items-center justify-center ">
+        <h2 className="text-3xl md:text-4xl font-bold lg:ml-5 lg:text-5xl">
+          Our <span className="text-btncolor">Services</span>
+        </h2>
+      </div>
+        <HoverEffect items={items}/> */}
     </div>
     </>
   );
