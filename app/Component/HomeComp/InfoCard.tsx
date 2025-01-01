@@ -2,61 +2,42 @@
 import React from "react";
 import { motion } from "motion/react"
 import {HoverEffect} from "@/app/Component/Boxes";
+import {HoverBorderGradient} from "@/app/Component/MovingBorder";
 const InfoCards = () => {
-  const items = [
-    {
-      title: "Web Development",
-      description:
-        "Build robust and scalable websites tailored to your business needs using cutting-edge technologies.",
-      icon: "/web.svg", // Replace with the actual path to the icon
-      link: "https://stripe.com",
-    },
-    {
-      title: "Mobile Application",
-      description:
-        "Create user-friendly mobile apps for Android and iOS platforms that provide seamless experiences.",
-      icon: "/mobileapp.svg", // Replace with the actual path to the icon
-      link: "https://netflix.com",
-    },
-    {
-      title: "Digital Marketing",
-      description:
-        "Enhance your online presence and drive traffic with our strategic digital marketing solutions.",
-      icon: "/dm.svg", // Replace with the actual path to the icon
-      link: "https://google.com",
-    },
-    {
-      title: "CRM",
-      description:
-        "Streamline your customer relationships with powerful and intuitive CRM solutions.",
-      icon: "/crm.svg", // Replace with the actual path to the icon
-      link: "https://meta.com",
-    },
-    {
-      title: "Graphics Designing",
-      description:
-        "Bring your ideas to life with stunning and innovative graphic designs that captivate your audience.",
-      icon: "/gd.svg", // Replace with the actual path to the icon
-      link: "https://amazon.com",
-    },
-    {
-      title: "AI & ML",
-      description:
-        "Leverage the power of Artificial Intelligence and Machine Learning to automate and innovate.",
-      icon: "/ai.svg", // Replace with the actual path to the icon
-      link: "https://microsoft.com",
-    },
-  ];
+  
   
   return (
     <>
-    <div className="lg:h-[100svh] w-full  lg:px-28 bg-black">
-    {/* <div className="text-start mb-9 items-center justify-center ">
-        <h2 className="text-3xl md:text-4xl font-bold lg:ml-5 lg:text-5xl">
-          Our <span className="text-btncolor">Services</span>
-        </h2>
+    <div className="lg:h-[100svh] w-full  lg:px-28">
+   <div className="grid grid-cols-6">
+    <div className=" w-full h-[50svh] col-span-4 p-7">
+      <div className="w-full h-full border-1 rounded-2xl flex justify-center items-center">
+      <h2 className="text">
+        Bring your vision to life with cutting edge Technology and expert solutions.
+      </h2>
       </div>
-        <HoverEffect items={items}/> */}
+    </div>
+    <div className="w-full h-[50svh] col-span-2  py-7">
+    <div className="w-full h-full border-1 rounded-2xl">
+ 
+ </div>
+    </div>
+   </div>
+   <div className="grid grid-cols-8">
+    <div className="w-full h-[50svh] col-span-3 pb-7 pl-7 flex flex-col space-y-7">
+    <div className="w-full h-1/2 border-1 rounded-2xl">
+ 
+ </div>
+ <div className="w-full h-1/2 border-1 rounded-2xl">
+ 
+ </div>
+    </div>
+    <div className=" w-full h-[50svh] col-span-5 pl-7 pb-7">
+    <div className="w-full h-full border-1 rounded-2xl">
+ 
+ </div>
+    </div>
+   </div>
     </div>
     </>
   );
