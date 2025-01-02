@@ -57,6 +57,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
+    <>
     <div className="w-full h-auto lg:h-[100svh] px-6 md:px-20 lg:px-32 py-12 text-center justify-center items-center">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-start pb-11">
@@ -98,6 +99,8 @@ const TestimonialCarousel = () => {
         ))}
       </div>
     </div>
+    </>
+    
   );
 };
 

@@ -120,25 +120,5 @@ export const CardDescription = ({
   );
 };
 
-export const CardIcon = ({
-    className,
-    children,
-  }: {
-    className?: string;
-    children: React.ReactNode;
-  }) => {
-    return (
-     <div className="flex justify-start">
-                   <Image
-                     src={service.icon}
-                     alt={`${service.title} Icon`}
-                     width={40}
-                     height={40}
-                     className="object-contain"
-                   />
-                 
-        {children}
-        </div>
-    );
-  };
+
   
