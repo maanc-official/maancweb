@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavMenu from "./Component/NavMenu";
+import Footer from "./Component/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,10 @@ export default function RootLayout({
         {/* Main Content */}
         <div className="pt-[70px]"> {/* Adjust `pt` to match the navbar height */}
           {children}
+        </div>
+
+        <div>
+          <Footer/>
         </div>
       </body>
     </html>
