@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-    <Navbar className="w-full px-4 sm:px-8 bg-white">
+    <Navbar className="w-full px-0 sm:px-8 bg-white">
       {/* Navbar for Mobile */}
       <div className="flex items-center justify-between sm:hidden w-full mt-9  ">
         {/* Hamburger Icon */}
