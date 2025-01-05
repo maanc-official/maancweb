@@ -69,7 +69,7 @@ const InfoCards = () => {
     <>
     <div className="lg:h-[100svh] w-full  lg:px-28 flex justify-center items-center flex-col">
     <div className="flex mb-9 lg:justify-start w-full items-center justify-center lg:ml-5">
-    <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-12 bg-btncolor"/>
+    <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-12 bg-btncolor"/>
       </div>
       
         <HoverEffect items={items}/>

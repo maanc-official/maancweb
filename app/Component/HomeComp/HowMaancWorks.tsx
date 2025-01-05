@@ -60,7 +60,7 @@ const HowMaancWorks: React.FC = () => {
       {/* Title */}
       <TypewriterEffectSmooth
         words={words}
-        cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-12 bg-btncolor"
+        cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-12 bg-btncolor"
       />
 
       {/* Steps */}
@@ -76,7 +76,7 @@ const HowMaancWorks: React.FC = () => {
                 duration: 1,
                 delay: index * 0.3,
               }}
-              className="group relative w-[280px] h-[400px] md:w-[300px] md:h-[400px] perspective"
+              className="group relative h-[300px] w-[200px] lg:w-[280px] lg:h-[400px] md:w-[300px] md:h-[400px]  perspective"
             >
               <div className="relative w-full h-full transform-gpu group-hover:rotate-y-180 transition-transform duration-1000 preserve-3d">
                 {/* Front (Title + Background Color Red) */}

@@ -11,12 +11,12 @@ const HeroSec = () => {
   const words = [
     {
       text: "Maanc",
-      className:"text-btncolor text-[28px] md:text-[36px] lg:text-[60px] font-extrabold",
+      className:"text-btncolor text-3xl md:text-[36px] lg:text-[60px] font-extrabold ",
       
     },
     {
       text: "Technology",
-      className:"text-[28px] md:text-[36px] lg:text-[60px] font-extrabold", 
+      className:"text-3xl md:text-[36px] lg:text-[60px] font-extrabold", 
      
       
     },
@@ -29,7 +29,7 @@ const HeroSec = () => {
           {/* Text Section */}
           <div className="lg:w-1/2 w-full flex flex-col items-center lg:items-start justify-center space-y-10 text-center lg:text-left">
             <div className="flex justify-center lg:justify-start space-x-4 text-[28px] md:text-[36px] lg:text-[60px] font-extrabold">
-            <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-16 bg-btncolor"/>
+            <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-16 bg-btncolor"/>
             </div>
     <div className="space-y-2">
 

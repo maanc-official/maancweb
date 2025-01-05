@@ -1,4 +1,4 @@
-"use client";
+
 
 import HeroSec from "./Component/HomeComp/HeroSec";
 import HowMaancWorks from "./Component/HomeComp/HowMaancWorks";
@@ -22,3 +22,6 @@ export default function Home() {
     </>
   );
 }
+export const metadata = {
+  title: 'Maanc Technology',
+};
