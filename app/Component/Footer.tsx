@@ -1,56 +1,55 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
 import Image from "next/image";
+import { useRef } from "react";
+
 const Footer = () => {
+  const ref = useRef(null); // Reference for the footer
+  const isInView = useInView(ref, {  amount: 0.5 }); // Observe visibility
+
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   const linkHover = {
     scale: 1.1,
-    transition: { duration: 0.2 }
+    transition: { duration: 0.2 },
   };
 
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "Services", href: "#" },
     { name: "About", href: "#" },
-    { name: "Contact", href: "#" }
+    { name: "Contact", href: "#" },
   ];
 
   const socialLinks = [
     { Icon: FaLinkedin, href: "#" },
     { Icon: FaTwitter, href: "#" },
-    { Icon: FaFacebook, href: "#" }
+    { Icon: FaFacebook, href: "#" },
   ];
 
   return (
-    
-    <motion.footer 
-      initial="initial"
-      animate="animate"
+    <motion.footer
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
       className="bg-white py-8 px-4 md:px-8 lg:px-16 w-full"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <motion.div variants={fadeInUp} className="flex flex-col items-start">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10rounded-full flex items-center justify-center">
-              <span className="text-slate-800 font-bold text-xl">
-
-                <Image
-              className="object-contain"
-              src="/Maancnewlogo.png"
-              alt="maanc logo"
-              width={200} // Adjusted for mobile
-              height={200} // Adjusted for mobile
-              sizes="(max-width: 768px) 150px, 
-                     (max-width: 1024px) 200px, 
-                     250px" // Automatically adjust size
-            />
-              </span>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center">
+              <Image
+                className="object-contain"
+                src="/Maancnewlogo.png"
+                alt="maanc logo"
+                width={200}
+                height={200}
+                sizes="(max-width: 768px) 150px, (max-width: 1024px) 200px, 250px"
+              />
             </div>
             <span className="text-xl font-bold">Maanc Technology</span>
           </div>
@@ -103,9 +102,9 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         variants={fadeInUp}
-        className="border-t border-gray-700 mt-8 pt-8 text-center  text-sm"
+        className="border-t border-gray-700 mt-8 pt-8 text-center text-sm"
       >
         <span className="text-btncolor">©</span> {new Date().getFullYear()} Maanc. All rights reserved.
       </motion.div>

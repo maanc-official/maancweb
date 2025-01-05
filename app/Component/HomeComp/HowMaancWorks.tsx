@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Importing arrow icon from react-icons
+import { TypewriterEffectSmooth } from "@/app/Component/TypeWriter";
+import { motion, useInView } from "framer-motion";
 
 type Step = {
   title: string;
@@ -9,6 +11,21 @@ type Step = {
 };
 
 const HowMaancWorks: React.FC = () => {
+  const words = [
+    {
+      text: "How",
+      className: "text-3xl md:text-4xl font-bold lg:text-5xl",
+    },
+    {
+      text: "Maanc",
+      className: "text-btncolor text-3xl md:text-4xl font-bold lg:text-5xl",
+    },
+    {
+      text: "Works?",
+      className: "text-3xl md:text-4xl font-bold lg:text-5xl",
+    },
+  ];
+
   const steps: Step[] = [
     {
       title: "Define",
@@ -32,23 +49,41 @@ const HowMaancWorks: React.FC = () => {
     },
   ];
 
+  const ref = useRef(null); // Reference for the section
+  const isInView = useInView(ref, { once: true, amount: 0.3 }); // Trigger animations when 10% of the section is visible
+
   return (
-    <section className="h-auto md:h-[100vh] flex flex-col justify-center items-center p-4 md:px-20 lg:px-32 gap-24 mb-16 md:mb-0">
+    <section
+      ref={ref}
+      className="h-auto md:h-[100vh] flex flex-col justify-center items-center p-4 md:px-20 lg:px-32 gap-24 mb-16 md:mb-0"
+    >
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-left w-full">
-        How <span className="text-btncolor">Maanc</span> Works?
-      </h1>
+      <TypewriterEffectSmooth
+        words={words}
+        cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-12 bg-btncolor"
+      />
 
       {/* Steps */}
       <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-1">
         {steps.map((step, index) => (
           <React.Fragment key={index}>
             {/* Card */}
-            <div className="group relative w-[280px] h-[400px] md:w-[300px] md:h-[400px] perspective">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                type: "spring",
+                duration: 1,
+                delay: index * 0.3,
+              }}
+              className="group relative w-[280px] h-[400px] md:w-[300px] md:h-[400px] perspective"
+            >
               <div className="relative w-full h-full transform-gpu group-hover:rotate-y-180 transition-transform duration-1000 preserve-3d">
                 {/* Front (Title + Background Color Red) */}
                 <div className="absolute inset-0 flex justify-center items-center bg-btncolor rounded-lg shadow-lg backface-hidden">
-                  <h2 className="text-2xl font-semibold text-white text-center">{step.title}</h2>
+                  <h2 className="text-2xl font-semibold text-white text-center">
+                    {step.title}
+                  </h2>
                 </div>
 
                 {/* Back (Description) */}
@@ -56,15 +91,22 @@ const HowMaancWorks: React.FC = () => {
                   <p className="text-sm text-center">{step.description}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Arrow Icon - Show after every card except the last */}
             {index < steps.length - 1 && (
-              <div className="flex justify-center items-center mx-4 md:mx-6">
-                <FiArrowRight
-                  className="text-btncolor text-3xl md:text-3xl transform md:rotate-0 rotate-90"
-                />
-              </div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{
+                  type: "spring",
+                  duration: 2,
+                  delay: index * 0.3 + 0.1,
+                }}
+                className="flex justify-center items-center mx-4 md:mx-6"
+              >
+                <FiArrowRight className="text-btncolor text-3xl md:text-3xl transform md:rotate-0 rotate-90" />
+              </motion.div>
             )}
           </React.Fragment>
         ))}
