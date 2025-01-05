@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Navbar,
   NavbarBrand,
@@ -24,7 +25,16 @@ export default function App() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const fadeInUp = {
+    initial: { opacity: 0, y: -60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
 
+  const linkHover = {
+    scale: 1.1,
+    transition: { duration: 0.2 }
+  };
   return (
     <Navbar className="w-full px-0 sm:px-8 bg-white">
       {/* Navbar for Mobile */}
@@ -42,7 +52,14 @@ export default function App() {
 
       {/* Hamburger Menu Items (Mobile) */}
       {isMenuOpen && (
-        <div className="absolute top-0 left-0 w-3/4 h-screen bg-white shadow-lg p-4 sm:hidden">
+        <motion.div 
+        initial={{
+          x:-100,
+        }}
+        animate={{
+          x:0
+        }}
+        className="absolute top-0 left-0 w-3/4 h-screen bg-white shadow-lg p-4 sm:hidden">
           <div className="flex justify-end mb-4">
             <IoClose className="text-2xl cursor-pointer" onClick={toggleMenu} />
           </div>
@@ -66,16 +83,20 @@ export default function App() {
               </NavbarItem>
             ))}
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* Navbar for Desktop */}
-      <div className="hidden sm:flex justify-between items-center w-full">
+      <motion.div
+      initial="initial"
+      animate="animate"
+      variants={fadeInUp}
+      className="hidden sm:flex justify-between items-center w-full">
         <NavbarBrand>
           <p className="font-bold text-inherit">Maanc Technology</p>
         </NavbarBrand>
 
-        <NavbarContent className="flex gap-4">
+        {/* <NavbarContent className="flex gap-4">
           {[
             { path: "/", label: "Home" },
             { path: "/Offerings", label: "Offerings" },
@@ -94,7 +115,32 @@ export default function App() {
               </Link>
             </NavbarItem>
           ))}
-        </NavbarContent>
+        </NavbarContent> */}
+        <NavbarContent className="flex gap-4">
+  {[
+    { path: "/", label: "Home" },
+    { path: "/Offerings", label: "Offerings" },
+    { path: "/About", label: "About" },
+    { path: "/JoinUs", label: "Join Us" },
+    { path: "/ContactUs", label: "Contact Us" },
+  ].map((item, index) => (
+    <NavbarItem
+      key={index}
+      className={`relative w-auto h-auto ${
+        isActive(item.path) ? "font-bold text-btncolor" : ""
+      }`}
+    >
+      <Link href={item.path}>
+        <span className="relative group">
+          {item.label}
+          {/* Underline Animation */}
+          <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-btncolor transition-all duration-500 ease-out group-hover:left-0 group-hover:w-full"></span>
+        </span>
+      </Link>
+    </NavbarItem>
+  ))}
+</NavbarContent>
+
 
         <NavbarContent justify="end">
           <NavbarItem>
@@ -107,7 +153,8 @@ export default function App() {
             </Button>
           </NavbarItem>
         </NavbarContent>
-      </div>
+      </motion.div>
     </Navbar>
+    
   );
 }

@@ -1,8 +1,37 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import {TypewriterEffectSmooth} from "@/app/Component/TypeWriter"
 const TestimonialCarousel = () => {
+  const words = [
+    {
+      text: "What",
+      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
+      
+    },
+    {
+      text: "our",
+      
+      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
+     
+      
+    },
+    {
+      text: "clients",
+      
+      className:"text-btncolor text-3xl md:text-4xl font-bold lg:text-5xl",
+     
+      
+    },
+    {
+      text: "think",
+      
+      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
+     
+      
+    },
+    
+  ];
   const testimonials = [
     {
       text: "Working with Maanc Technologies has been transformative for our business. Their team quickly understood our unique challenges and provided innovative, customized solutions that exceeded our expectations. From seamless integration to ongoing support, they made the entire process smooth and stress-free. Our productivity has increased, and we’re seeing real results. Highly recommend them for any business looking to take their technology to the next level!",
@@ -60,9 +89,10 @@ const TestimonialCarousel = () => {
     <>
     <div className="w-full h-auto lg:h-[100svh] px-6 md:px-20 lg:px-32 py-12 text-center justify-center items-center">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-start pb-11">
-        What our <span className="text-btncolor">clients</span> think
-      </h2>
+      <div className="w-full flex justify-center ">
+      <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-12 bg-btncolor"/>
+      </div>
+       
 
       {/* Testimonial Card */}
       <div

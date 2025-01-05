@@ -4,9 +4,24 @@ import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import {TypewriterEffectSmooth} from "@/app/Component/TypeWriter"
 
 
 const HeroSec = () => {
+  const words = [
+    {
+      text: "Maanc",
+      className:"text-btncolor text-[28px] md:text-[36px] lg:text-[60px] font-extrabold",
+      
+    },
+    {
+      text: "Technology",
+      className:"text-[28px] md:text-[36px] lg:text-[60px] font-extrabold", 
+     
+      
+    },
+    
+  ];
   return (
     <>
       <div className="flex h-[100svh] w-full flex-col px-6 md:px-12 lg:px-28">
@@ -14,33 +29,70 @@ const HeroSec = () => {
           {/* Text Section */}
           <div className="lg:w-1/2 w-full flex flex-col items-center lg:items-start justify-center space-y-10 text-center lg:text-left">
             <div className="flex justify-center lg:justify-start space-x-4 text-[28px] md:text-[36px] lg:text-[60px] font-extrabold">
-              <h1 className="text-btncolor">Maanc</h1>
-              <h1>Technology</h1>
+            <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-16 bg-btncolor"/>
             </div>
     <div className="space-y-2">
 
     
-            <div className="text-[20px] md:text-[24px] lg:text-[30px] font-bold">
+            <motion.div 
+            initial={{
+              opacity:0
+            }}
+            animate={{
+              opacity:1
+            }}
+            transition={{
+              duration:1,
+              delay:1,
+              ease:"easeInOut"
+            }}
+            className="text-[20px] md:text-[24px] lg:text-[30px] font-bold">
               <h2>IT Consulting &</h2>
               <h2>Software Solutions</h2>
-            </div>
+            </motion.div>
 
-            <p className="text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
+            <motion.p 
+            initial={{
+              opacity:0
+            }}
+            animate={{
+              opacity:1
+            }}
+            transition={{
+              duration:1,
+              delay:1,
+              ease:"easeInOut"
+            }}
+            className="text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
               Maanc Technologies is dedicated to helping businesses unlock their
               full potential with expert IT consulting and innovative software
               solutions. We partner with clients to streamline processes, boost
               efficiency, and accelerate growth.
-            </p>
+            </motion.p>
             </div>
-            <div className="">
+            <motion.div 
+            initial={{
+              opacity:0,
+              y:20
+            }}
+            animate={{
+              opacity:1,
+              y:0
+            }}
+            transition={{
+              duration:1,
+              delay:0.5,
+              ease:"easeInOut"
+            }}
+            className="">
               <Button
-                className="bg-btncolor rounded-md text-white py-2 px-4 text-[14px] md:text-[16px] lg:text-[18px] "
+                className="bg-btncolor rounded-lg text-white lg:py-6 lg:px-6 md:py-5 md:px-5 py-4 px-4  text-[14px] md:text-[16px] lg:text-[18px] "
                 as={Link}
                 href="/contactUs"
               >
                 Let&apos;s Talk
               </Button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Image Section */}
@@ -72,7 +124,7 @@ const HeroSec = () => {
               originX: 0.5, // Scale from the center horizontally
               originY: 0.5, // Scale from the center vertically
             }}
-            className="bg-btncolor w-52 h-52 rounded-3xl relative shadow-custom-inner ml-10">
+            className="bg-btncolor lg:w-52 lg:h-52 md:w-32 md:h-32 w-24 h-24  lg:rounded-3xl md:rounded-2xl rounded-xl relative shadow-custom-inner ml-10">
               <motion.div
                initial={{
                 x: 0,
@@ -88,7 +140,7 @@ const HeroSec = () => {
                 delay:0.7,
                 bounce:1,
               }}
-              className="bg-white w-52 h-52 rounded-3xl shadow-custom-large absolute ">
+              className="bg-white lg:w-52 lg:h-52 md:w-32 md:h-32 w-24 h-24  lg:rounded-3xl md:rounded-2xl rounded-xl shadow-custom-large absolute ">
 
               </motion.div>
 
