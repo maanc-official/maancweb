@@ -55,7 +55,7 @@ const HowMaancWorks: React.FC = () => {
   return (
     <section
       ref={ref}
-      className="h-auto md:h-[100vh] flex flex-col justify-center items-center p-4 md:px-20 lg:px-32 gap-24 mb-16 md:mb-0"
+      className="h-auto lg:h-[100vh] flex flex-col justify-center items-center p-4 md:px-20 lg:px-32 gap-24 mb-16 md:mb-0"
     >
       {/* Title */}
       <TypewriterEffectSmooth
@@ -64,7 +64,7 @@ const HowMaancWorks: React.FC = () => {
       />
 
       {/* Steps */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-1">
+      <div className="w-full flex flex-col  lg:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-1">
         {steps.map((step, index) => (
           <React.Fragment key={index}>
             {/* Card */}
@@ -105,7 +105,7 @@ const HowMaancWorks: React.FC = () => {
                 }}
                 className="flex justify-center items-center mx-4 md:mx-6"
               >
-                <FiArrowRight className="text-btncolor text-3xl md:text-3xl transform md:rotate-0 rotate-90" />
+                <FiArrowRight className="text-btncolor text-3xl md:text-3xl transform lg:rotate-0 rotate-90" />
               </motion.div>
             )}
           </React.Fragment>
