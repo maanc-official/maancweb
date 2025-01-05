@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import MeetingForm from '../Component/ContactCom/MeetingForm'
 
 const ContactUs  = () => {
   return (
@@ -7,9 +8,9 @@ const ContactUs  = () => {
     
    
      
-     <div className="h-[100svh] w-full   ">
+     <div className="">
 
-      <h1>Contact us</h1>
+      <MeetingForm/>
       
       </div>
       
