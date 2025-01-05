@@ -90,13 +90,13 @@ const TestimonialCarousel = () => {
     <div className="w-full h-auto lg:h-[100svh] px-6 md:px-20 lg:px-32 py-12 text-center justify-center items-center">
       {/* Section Title */}
       <div className="w-full flex justify-center ">
-      <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-6 sm:h-6 xl:h-12 bg-btncolor"/>
+      <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-12 bg-btncolor"/>
       </div>
        
 
       {/* Testimonial Card */}
       <div
-        className="relative bg-white shadow-md rounded-lg p-8 mx-auto w-full h-[300px] overflow-hidden "
+        className="relative bg-white shadow-lg rounded-lg p-8 mx-auto w-full h-[500px] overflow-hidden"
         style={{ transition: "transform 0.5s ease-in-out" }}
       >
         <div
