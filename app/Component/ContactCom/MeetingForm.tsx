@@ -36,25 +36,21 @@ const MeetingForm: React.FC = () => {
       timeSlot: "",
     };
 
-    // Name validation: should be a string
     if (!formData.name.trim() || !/^[a-zA-Z\s]+$/.test(formData.name)) {
       newErrors.name = "Name should only contain letters.";
       isValid = false;
     }
 
-    // Email validation
     if (!formData.email.trim() || !/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
       newErrors.email = "Enter a valid email address.";
       isValid = false;
     }
 
-    // Phone validation: should be exactly 10 digits
     if (!formData.phone.trim() || !/^\d{10}$/.test(formData.phone)) {
       newErrors.phone = "Phone number must be exactly 10 digits.";
       isValid = false;
     }
 
-    // Time slot validation
     if (!formData.timeSlot.trim()) {
       newErrors.timeSlot = "Please select a time and date.";
       isValid = false;
@@ -89,14 +85,14 @@ const MeetingForm: React.FC = () => {
   };
 
   return (
-    <div className="h-auto lg:h-[100svh] w-full flex flex-col items-center justify-center bg-gray-50">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-50 px-4">
       {/* Form Container */}
-      <div className="w-full max-w-[60%] p-8 bg-white shadow-lg rounded-lg py-10">
+      <div className="w-full max-w-3xl p-6 sm:p-8 bg-white shadow-lg rounded-lg">
         {/* Title */}
-        <h1 className="text-3xl font-bold text-center mb-8 text-btncolor">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-btncolor">
           Book a meeting now
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-2 w-full">
+        <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium mb-1">
@@ -187,7 +183,7 @@ const MeetingForm: React.FC = () => {
               rows={4}
             ></textarea>
           </div>
-          <div className="flex justify-end space-x-4">
+          <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-4">
             <button
               type="button"
               onClick={handleClear}
