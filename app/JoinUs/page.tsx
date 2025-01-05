@@ -36,7 +36,7 @@ const JoinUs = () => {
     <>
       <JoinusI />
 
-      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-10 space-y-16 bg-gray-50">
+      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50 ">
         {/* Join Our Team Section */}
         <section ref={sectionRefs[0]} className="text-center space-y-8">
           <h2 className="text-2xl font-bold text-btncolor">Benefits & Perks</h2>

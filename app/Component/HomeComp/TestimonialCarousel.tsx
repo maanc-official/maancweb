@@ -96,15 +96,15 @@ const TestimonialCarousel = () => {
 
       {/* Testimonial Card */}
       <div
-        className="relative bg-white shadow-md rounded-lg p-8 mx-auto w-full h-[300px] overflow-hidden"
+        className="relative bg-white shadow-md rounded-lg p-8 mx-auto w-full h-[300px] overflow-hidden "
         style={{ transition: "transform 0.5s ease-in-out" }}
       >
         <div
-          className={`absolute inset-0 flex flex-col justify-center items-center transition-transform duration-500 px-8 ${
+          className={`absolute inset-0 flex flex-col justify-center items-center py-8 transition-transform duration-500 px-8 ${
             isSliding ? "translate-x-[-100%]" : "translate-x-0"
           }`}
         >
-          <p className="text-lg italic text-gray-600 mb-6">
+          <p className="text-lg italic text-gray-600 mb-6 overflow-auto">
             <span className="text-btncolor">“</span>{testimonials[currentIndex].text}<span className="text-btncolor">”</span>
           </p>
           <h4 className="text-lg font-bold text-btncolor">

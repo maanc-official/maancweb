@@ -1,6 +1,6 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaFacebook , FaWhatsapp} from "react-icons/fa";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -29,6 +29,7 @@ const Footer = () => {
     { Icon: FaLinkedin, href: "#" },
     { Icon: FaTwitter, href: "#" },
     { Icon: FaFacebook, href: "#" },
+    { Icon: FaWhatsapp, href: "https://wa.link/hm3e3n"}
   ];
 
   return (
@@ -82,7 +83,8 @@ const Footer = () => {
                 key={index}
                 href={href}
                 whileHover={linkHover}
-                className="text-btncolor hover:text-btncolor transition-colors duration-200"
+                target="_blank"
+                className="text-btncolor hover:text-btncolor transition-colors duration-200  "
               >
                 <Icon size={24} />
               </motion.a>
