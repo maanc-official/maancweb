@@ -27,7 +27,7 @@ const JoinusI = () => {
             </p>
             <motion.button
               whileHover={{ scale: 1.1 }}
-              className="bg-btncolor text-white px-6 py-2 rounded-md hover:bg-btncolor transition"
+              className="bg-btncolor text-white px-6 py-2 rounded-full hover:bg-btncolor transition"
             >
               See open positions
             </motion.button>
@@ -37,17 +37,25 @@ const JoinusI = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-64 h-64 border-2 border-btncolor rounded-md flex flex-col items-center justify-center text-center shadow-md bg-white hover:bg-btncolor hover:text-white transition duration-300"
+              className="w-96 h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group"
             >
-              <h3 className="text-lg font-semibold">About</h3>
-              <p className="font-medium">What we believe</p>
+              <h3 className="text-lg font-semibold text-black group-hover:text-white">
+                About
+              </h3>
+              <p className="font-medium text-3xl text-btncolor group-hover:text-white">
+                What we believe
+              </p>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-64 h-64 border-2 border-btncolor rounded-md flex flex-col items-center justify-center text-center shadow-md bg-white hover:bg-btncolor hover:text-white transition duration-300"
+              className="w-96 h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group"
             >
-              <h3 className="text-lg font-semibold">Values</h3>
-              <p>How we work</p>
+              <h3 className="text-lg font-semibold text-black group-hover:text-white">
+                Values
+              </h3>
+              <p className="font-medium text-3xl text-btncolor group-hover:text-white">
+                How we work
+              </p>
             </motion.div>
           </div>
         </section>

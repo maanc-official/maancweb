@@ -77,34 +77,7 @@ const JoinUs = () => {
           </motion.div>
         </section>
         {/* Why Join Us Section */}
-        <section ref={sectionRefs[1]} className="space-y-8">
-          <h2 className="text-2xl font-bold text-btncolor text-center">
-            Why Join Us?
-          </h2>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={controls}
-            variants={{
-              ["visible-1"]: {
-                opacity: 1,
-                x: 0,
-                transition: { duration: 0.8 },
-              },
-            }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            <div className="bg-gray-100 p-6 rounded-md shadow-md text-center hover:bg-btncolor hover:text-white transition duration-300">
-              <h4 className="font-semibold mb-2">Innovative Culture</h4>
-              <p>
-                Be part of a team that values creativity and forward-thinking.
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-md shadow-md text-center hover:bg-btncolor hover:text-white transition duration-300">
-              <h4 className="font-semibold mb-2">Global Impact</h4>
-              <p>Work on projects that make a difference globally.</p>
-            </div>
-          </motion.div>
-        </section>
+
         {/* Contact Form Section */}
         <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white ">
           <h2 className="text-xl font-bold text-btncolor text-center">
