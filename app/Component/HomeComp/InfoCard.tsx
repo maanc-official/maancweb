@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react"
+
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 

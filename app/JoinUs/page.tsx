@@ -36,8 +36,7 @@ const JoinUs = () => {
     <>
       <JoinusI />
 
-      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50 ">
-        {/* Join Our Team Section */}
+      <div className="w-full lg:px-32 pb-32 px-7">
         <section ref={sectionRefs[0]} className="text-center space-y-8">
           <h2 className="text-2xl font-bold text-btncolor">Benefits & Perks</h2>
           <motion.div
@@ -53,21 +52,21 @@ const JoinUs = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {/* Benefits Cards */}
-            <div className="bg-white p-6 rounded-md shadow-md text-center border-2 border-btncolor hover:bg-btncolor hover:text-white transition duration-300">
+            <div className="bg-white p-6 rounded-md shadow-md text-center  transition duration-300">
               <h4 className="font-semibold mb-2">Flexible Work Hours</h4>
               <p>
                 Enjoy a balanced lifestyle with schedules tailored to ensure
                 your productivity and well-being.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-md shadow-md text-center border-2 border-btncolor hover:bg-btncolor hover:text-white transition duration-300">
+            <div className="bg-white p-6 rounded-md shadow-md text-center    transition duration-300">
               <h4 className="font-semibold mb-2">Health Insurance</h4>
               <p>
                 Comprehensive health coverage plans for employees and their
                 families.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-md shadow-md text-center border-2 border-btncolor hover:bg-btncolor hover:text-white transition duration-300">
+            <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Career Growth</h4>
               <p>
                 Opportunities to enhance skills and progress professionally
@@ -76,9 +75,9 @@ const JoinUs = () => {
             </div>
           </motion.div>
         </section>
-        {/* Why Join Us Section */}
+      </div>
 
-        {/* Contact Form Section */}
+      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50 ">
         <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white ">
           <h2 className="text-xl font-bold text-btncolor text-center">
             Let’s work together
