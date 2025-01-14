@@ -118,6 +118,7 @@ const HeroSec = () => {
               type:"spring",
               bounce:0.25,
               duration: 0.5, // Animation duration in seconds
+              delay:0.5
               // ease: "backInOut", // Smooth easing
             }}
             style={{
@@ -137,7 +138,7 @@ const HeroSec = () => {
               transition={{
                 duration: 0.7, // Duration of the animation in seconds
                 ease: "backOut", // Smooth easing
-                delay:0.7,
+                delay:1.2,
                 bounce:1,
               }}
               className="bg-white lg:w-52 lg:h-52 md:w-32 md:h-32 w-24 h-24  lg:rounded-3xl md:rounded-2xl rounded-xl shadow-custom-large absolute ">
