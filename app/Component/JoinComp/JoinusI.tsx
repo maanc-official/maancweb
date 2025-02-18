@@ -37,7 +37,7 @@ const JoinusI = () => {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-5 sm:gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group px-5"
+              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group px-5 cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-semibold text-black group-hover:text-white">
                 About
@@ -48,7 +48,7 @@ const JoinusI = () => {
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group"
+              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-semibold text-black group-hover:text-white">
                 Values

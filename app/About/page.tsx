@@ -1,9 +1,13 @@
 "use client"
 import React from 'react'
+import StorySection from '../Component/AbouComp/StorySection'
 
 const About = () => {
   return (
-    <div>About page</div>
+    <>
+    <StorySection/>
+    
+    </>
   )
 }
 

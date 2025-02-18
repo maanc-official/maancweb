@@ -41,7 +41,10 @@ const MeetingForm: React.FC = () => {
       isValid = false;
     }
 
-    if (!formData.email.trim() || !/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+    if (
+      !formData.email.trim() ||
+      !/^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(formData.email)
+    ) {
       newErrors.email = "Enter a valid email address.";
       isValid = false;
     }
@@ -51,8 +54,13 @@ const MeetingForm: React.FC = () => {
       isValid = false;
     }
 
-    if (!formData.timeSlot.trim()) {
-      newErrors.timeSlot = "Please select a time and date.";
+    const selectedDate = new Date(formData.timeSlot);
+    const now = new Date();
+    now.setDate(now.getDate() + 1); // Set to one day later from the current date
+
+    if (!formData.timeSlot.trim() || selectedDate < now) {
+      newErrors.timeSlot =
+        "Please select a date and time that is at least one day later than today.";
       isValid = false;
     }
 
@@ -86,9 +94,7 @@ const MeetingForm: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-50 px-4">
-      {/* Form Container */}
       <div className="w-full max-w-3xl p-6 sm:p-8 bg-white shadow-lg rounded-lg">
-        {/* Title */}
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-btncolor">
           Book a meeting now
         </h1>
@@ -164,6 +170,9 @@ const MeetingForm: React.FC = () => {
                   errors.timeSlot ? "border-red-500" : "border-gray-300"
                 } rounded-md focus:ring-btncolor focus:border-btncolor`}
                 required
+                min={new Date(Date.now() + 24 * 60 * 60 * 1000)
+                  .toISOString()
+                  .slice(0, 16)} // Dynamically set the minimum date/time
               />
               {errors.timeSlot && (
                 <p className="text-red-500 text-sm mt-1">{errors.timeSlot}</p>
