@@ -93,7 +93,7 @@ const JoinUs = () => {
                   id="name"
                   required
                   placeholder="John Doe"
-                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-btncolor focus:border-btncolor"
+                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 />
               </div>
               <div>
@@ -105,7 +105,7 @@ const JoinUs = () => {
                   id="email"
                   required
                   placeholder="info.maanc@gmail.com"
-                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-btncolor focus:border-btncolor"
+                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 />
               </div>
             </div>
@@ -119,7 +119,7 @@ const JoinUs = () => {
                   id="phone"
                   required
                   placeholder="9608923255"
-                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-btncolor focus:border-btncolor"
+                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 />
               </div>
               <div>
@@ -131,7 +131,7 @@ const JoinUs = () => {
                   id="job"
                   required
                   placeholder="Java Developer"
-                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-btncolor focus:border-btncolor"
+                  className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 />
               </div>
             </div>
@@ -143,7 +143,7 @@ const JoinUs = () => {
                 id="about"
                 required
                 placeholder="Tell us about yourself"
-                className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-btncolor focus:border-btncolor"
+                className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 rows={4}
               ></textarea>
             </div>
@@ -156,7 +156,7 @@ const JoinUs = () => {
               </button>
               <button
                 type="submit"
-                className="bg-btncolor text-white px-4 py-2 rounded-md hover:bg-btncolor"
+                className="bg-black text-white px-4 py-2 rounded-md hover:bg-btncolor"
               >
                 Apply
               </button>

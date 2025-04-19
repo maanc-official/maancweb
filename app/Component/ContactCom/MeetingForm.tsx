@@ -112,7 +112,7 @@ const MeetingForm: React.FC = () => {
                 placeholder="John Doe"
                 className={`w-full p-2 border ${
                   errors.name ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:ring-btncolor focus:border-btncolor`}
+                } rounded-md focus:ring-black focus:border-black`}
                 required
               />
               {errors.name && (
@@ -131,7 +131,7 @@ const MeetingForm: React.FC = () => {
                 placeholder="JohnDoe@gmail.com"
                 className={`w-full p-2 border ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:ring-btncolor focus:border-btncolor`}
+                } rounded-md focus:ring-black focus:border-black`}
                 required
               />
               {errors.email && (
@@ -150,7 +150,7 @@ const MeetingForm: React.FC = () => {
                 placeholder="1234567890"
                 className={`w-full p-2 border ${
                   errors.phone ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:ring-btncolor focus:border-btncolor`}
+                } rounded-md focus:ring-black focus:border-black`}
                 required
               />
               {errors.phone && (
@@ -168,7 +168,7 @@ const MeetingForm: React.FC = () => {
                 onChange={handleChange}
                 className={`w-full p-2 border ${
                   errors.timeSlot ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:ring-btncolor focus:border-btncolor`}
+                } rounded-md focus:ring-black focus:border-black`}
                 required
                 min={new Date(Date.now() + 24 * 60 * 60 * 1000)
                   .toISOString()
@@ -188,7 +188,7 @@ const MeetingForm: React.FC = () => {
               value={formData.requirements}
               onChange={handleChange}
               placeholder="Describe your needs..."
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-btncolor focus:border-btncolor"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-black focus:border-black"
               rows={4}
             ></textarea>
           </div>
@@ -196,13 +196,13 @@ const MeetingForm: React.FC = () => {
             <button
               type="button"
               onClick={handleClear}
-              className="py-2 px-4 bg-white border border-btncolor text-btncolor rounded-md hover:bg-red-50"
+              className="py-2 px-4 bg-white border border-black text-black rounded-md hover:bg-red-50"
             >
               Clear
             </button>
             <button
               type="submit"
-              className="py-2 px-4 bg-btncolor text-white rounded-md hover:bg-red-600"
+              className="py-2 px-4 bg-black text-white rounded-md hover:bg-red-600"
             >
               Confirm
             </button>
