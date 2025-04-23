@@ -150,13 +150,13 @@ const JoinUs = () => {
             <div className="flex justify-between">
               <button
                 type="reset"
-                className="bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300"
+                className="bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-gray-300 transform hover:scale-105 transition duration-300"
               >
                 Clear
               </button>
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded-md hover:bg-btncolor"
+                className="bg-black text-white px-4 py-2 border border-black rounded-md hover:bg-white hover:text-black transform hover:scale-105 transition duration-300"
               >
                 Apply
               </button>
