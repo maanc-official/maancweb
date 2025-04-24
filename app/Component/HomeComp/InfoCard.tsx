@@ -1,45 +1,45 @@
 "use client"
 import { motion } from "framer-motion";
-import { FaCloud, FaServer, FaShieldAlt, FaCode, FaChartBar, FaRocket, FaLightbulb, FaCogs } from "react-icons/fa";
+import { FaRocket, FaLightbulb, FaCogs } from "react-icons/fa";
 
 const BentoGrid = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Cloud Consulting",
-      description: "Expert guidance for cloud migration and optimization strategies",
-      icon: <FaCloud className="text-4xl mb-4 text-blue-500" />,
-      bgImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8"
-    },
-    {
-      id: 2,
-      title: "IT Infrastructure",
-      description: "Comprehensive infrastructure management and monitoring",
-      icon: <FaServer className="text-4xl mb-4 text-green-500" />,
-      bgImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
-    },
-    {
-      id: 3,
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets",
-      icon: <FaShieldAlt className="text-4xl mb-4 text-red-500" />,
-      bgImage: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87"
-    },
-    {
-      id: 4,
-      title: "Software Development",
-      description: "Custom software solutions for your business needs",
-      icon: <FaCode className="text-4xl mb-4 text-purple-500" />,
-      bgImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
-    },
-    {
-      id: 5,
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights",
-      icon: <FaChartBar className="text-4xl mb-4 text-yellow-500" />,
-      bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-    }
-  ];
+  // const services = [
+  //   {
+  //     id: 1,
+  //     title: "Cloud Consulting",
+  //     description: "Expert guidance for cloud migration and optimization strategies",
+  //     icon: <FaCloud className="text-4xl mb-4 text-blue-500" />,
+  //     bgImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "IT Infrastructure",
+  //     description: "Comprehensive infrastructure management and monitoring",
+  //     icon: <FaServer className="text-4xl mb-4 text-green-500" />,
+  //     bgImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Cybersecurity",
+  //     description: "Advanced security solutions to protect your digital assets",
+  //     icon: <FaShieldAlt className="text-4xl mb-4 text-red-500" />,
+  //     bgImage: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87"
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Software Development",
+  //     description: "Custom software solutions for your business needs",
+  //     icon: <FaCode className="text-4xl mb-4 text-purple-500" />,
+  //     bgImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Data Analytics",
+  //     description: "Transform your data into actionable insights",
+  //     icon: <FaChartBar className="text-4xl mb-4 text-yellow-500" />,
+  //     bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+  //   }
+  // ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

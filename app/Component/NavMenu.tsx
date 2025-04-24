@@ -31,10 +31,10 @@ export default function App() {
     transition: { duration: 0.6 }
   };
 
-  const linkHover = {
-    scale: 1.1,
-    transition: { duration: 0.2 }
-  };
+  // const linkHover = {
+  //   scale: 1.1,
+  //   transition: { duration: 0.2 }
+  // };
   return (
     <Navbar className="w-full px-0 sm:px-8 bg-white">
       {/* Navbar for Mobile */}

@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Image from 'next/image'
 
 const Focus = () => {
   return (
@@ -27,7 +28,12 @@ const Focus = () => {
           {/* Card 1 */}
           <div className="w-full md:w-1/2">
             <div className="flex items-start">
-              <img src="https://via.placeholder.com/50" alt="Startup Icon" className="w-10 h-10" />
+              <Image
+                src="/"
+                alt="Startup Icon"
+                width={40}
+                height={40}
+              />
               <h3 className="md:text-[25px] font-bold md:ml-6 text-[18px] ml-4 mt-2">
                 App Development for Startups
               </h3>
@@ -42,7 +48,12 @@ const Focus = () => {
           {/* Card 2 */}
           <div className="w-full md:w-1/2">
             <div className="flex items-start">
-              <img src="https://via.placeholder.com/50" alt="Rescue Icon" className="w-10 h-10" />
+              <Image
+                src="/"
+                alt="Rescue Icon"
+                width={40}
+                height={40}
+              />
               <h3 className="md:text-[25px] font-bold md:ml-6 text-[18px] ml-4 mt-2">
                 Rescue Projects
               </h3>
@@ -60,7 +71,12 @@ const Focus = () => {
           {/* Card 3 */}
           <div className="w-full md:w-1/2">
             <div className="flex items-start">
-              <img src="https://via.placeholder.com/50" alt="Enterprise Icon" className="w-10 h-10" />
+              <Image
+                src="/"
+                alt="Enterprise Icon"
+                width={40}
+                height={40}
+              />
               <h3 className="md:text-[25px] font-bold md:ml-6 text-[18px] ml-4 mt-2">
                 Enterprise App Development
               </h3>
@@ -75,7 +91,12 @@ const Focus = () => {
           {/* Card 4 */}
           <div className="w-full md:w-1/2">
             <div className="flex items-start">
-              <img src="https://via.placeholder.com/50" alt="Strategy Icon" className="w-10 h-10" />
+              <Image
+                src="/"
+                alt="Strategy Icon"
+                width={40}
+                height={40}
+              />
               <h3 className="md:text-[25px] font-bold md:ml-6 text-[18px] ml-4 mt-2">
                 Product Planning & Strategy
               </h3>

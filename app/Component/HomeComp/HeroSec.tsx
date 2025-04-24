@@ -2,7 +2,6 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {TypewriterEffectSmooth} from "@/app/Component/TypeWriter"
 
