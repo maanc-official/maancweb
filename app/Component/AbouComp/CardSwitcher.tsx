@@ -2,11 +2,18 @@
 
 import { useState } from 'react';
 
-const CardSwitcher = () => {
-  const [activeCard, setActiveCard] = useState('beliefs');
-  const [hoverCard, setHoverCard] = useState(null);
+type CardKey = 'beliefs' | 'work';
 
-  const content = {
+const CardSwitcher = () => {
+  const [activeCard, setActiveCard] = useState<CardKey>('beliefs');
+  const [hoverCard, setHoverCard] = useState<CardKey | null>(null);
+
+  const content: Record<CardKey, {
+    heading: string;
+    icon: string;
+    summary: string;
+    fullText: string;
+  }> = {
     beliefs: {
       heading: 'What we believe',
       icon: '🍁',
@@ -36,8 +43,8 @@ const CardSwitcher = () => {
           <div
             key={key}
             className={`h-52 p-6 border-2 rounded-lg cursor-pointer flex flex-col items-center justify-center text-center transition-all transform hover:scale-105 ${displayedCard === key ? 'bg-btncolor text-white' : 'hover:bg-btncolor hover:text-white'}`}
-            onClick={() => setActiveCard(key)}
-            onMouseEnter={() => setHoverCard(key)}
+            onClick={() => setActiveCard(key as CardKey)}
+            onMouseEnter={() => setHoverCard(key as CardKey)}
             onMouseLeave={() => setHoverCard(null)}
           >
             <div className="text-5xl mb-4">{value.icon}</div>

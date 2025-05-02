@@ -26,6 +26,8 @@ export const TypewriterEffect = ({
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+  
+  // Added animate to the dependency array to resolve the ESLint warning
   useEffect(() => {
     if (isInView) {
       animate(
@@ -42,7 +44,7 @@ export const TypewriterEffect = ({
         }
       );
     }
-  }, [isInView]);
+  }, [isInView, animate]); // ✅ FIXED: added `animate` to the dependencies
 
   const renderWords = () => {
     return (
@@ -69,6 +71,7 @@ export const TypewriterEffect = ({
       </motion.div>
     );
   };
+
   return (
     <div
       className={cn(
@@ -117,6 +120,7 @@ export const TypewriterEffectSmooth = ({
       text: word.text.split(""),
     };
   });
+
   const renderWords = () => {
     return (
       <div>
@@ -173,7 +177,6 @@ export const TypewriterEffectSmooth = ({
         }}
         transition={{
           duration: 0.8,
-
           repeat: Infinity,
           repeatType: "reverse",
         }}

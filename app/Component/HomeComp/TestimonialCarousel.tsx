@@ -1,37 +1,28 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import {TypewriterEffectSmooth} from "@/app/Component/TypeWriter"
+import React, { useState, useEffect, useCallback } from "react";
+import { TypewriterEffectSmooth } from "@/app/Component/TypeWriter";
+
 const TestimonialCarousel = () => {
   const words = [
     {
       text: "What",
-      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
-      
+      className: "text-3xl md:text-4xl font-bold  lg:text-5xl",
     },
     {
       text: "our",
-      
-      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
-     
-      
+      className: "text-3xl md:text-4xl font-bold  lg:text-5xl",
     },
     {
       text: "clients",
-      
-      className:"text-btncolor text-3xl md:text-4xl font-bold lg:text-5xl",
-     
-      
+      className: "text-btncolor text-3xl md:text-4xl font-bold lg:text-5xl",
     },
     {
       text: "think",
-      
-      className:"text-3xl md:text-4xl font-bold  lg:text-5xl", 
-     
-      
+      className: "text-3xl md:text-4xl font-bold  lg:text-5xl",
     },
-    
   ];
+
   const testimonials = [
     {
       text: "Working with Maanc Technologies has been transformative for our business. Their team quickly understood our unique challenges and provided innovative, customized solutions that exceeded our expectations. From seamless integration to ongoing support, they made the entire process smooth and stress-free. Our productivity has increased, and we’re seeing real results. Highly recommend them for any business looking to take their technology to the next level!",
@@ -56,26 +47,27 @@ const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
 
-  // Auto-slide functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000); // Auto-slide every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const handleNext = () => {
+  // ✅ FIX: Memoize handleNext to prevent warning
+  const handleNext = useCallback(() => {
     setIsSliding(true);
     setTimeout(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
       setIsSliding(false);
-    }, 500); // Adjust duration to match the CSS transition
-  };
+    }, 500);
+  }, [testimonials.length]);
 
-  const handleDotClick = (index: React.SetStateAction<number>) => {
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [handleNext]);
+
+  const handleDotClick = (index: number) => {
     if (index !== currentIndex) {
       setIsSliding(true);
       setTimeout(() => {
@@ -86,13 +78,14 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <>
     <div className="w-full h-auto lg:h-[100svh] px-6 md:px-20 lg:px-32 py-12 text-center justify-center items-center">
       {/* Section Title */}
-      <div className="w-full flex justify-center ">
-      <TypewriterEffectSmooth words={words} cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-12 bg-btncolor"/>
+      <div className="w-full flex justify-center">
+        <TypewriterEffectSmooth
+          words={words}
+          cursorClassName="block rounded-sm w-[4px] h-8 sm:h-8 xl:h-12 bg-btncolor"
+        />
       </div>
-       
 
       {/* Testimonial Card */}
       <div
@@ -105,7 +98,9 @@ const TestimonialCarousel = () => {
           }`}
         >
           <p className="text-lg italic text-gray-600 mb-6 overflow-auto">
-            <span className="text-btncolor">“</span>{testimonials[currentIndex].text}<span className="text-btncolor">”</span>
+            <span className="text-btncolor">“</span>
+            {testimonials[currentIndex].text}
+            <span className="text-btncolor">”</span>
           </p>
           <h4 className="text-lg font-bold text-btncolor">
             – {testimonials[currentIndex].name}, {testimonials[currentIndex].position},{" "}
@@ -121,16 +116,12 @@ const TestimonialCarousel = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`w-3 h-3 rounded-full ${
-              currentIndex === index
-                ? "bg-btncolor"
-                : "bg-gray-300"
+              currentIndex === index ? "bg-btncolor" : "bg-gray-300"
             }`}
           ></button>
         ))}
       </div>
     </div>
-    </>
-    
   );
 };
 

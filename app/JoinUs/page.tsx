@@ -5,10 +5,13 @@ import JoinusI from "../Component/JoinComp/JoinusI";
 
 const JoinUs = () => {
   const controls = useAnimation();
-  const sectionRefs = [useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = useRef([useRef(null), useRef(null), useRef(null)]);
 
   useEffect(() => {
-    sectionRefs.forEach((ref, index) => {
+    const refsSnapshot = sectionRefs.current;
+    const observers: IntersectionObserver[] = [];
+
+    refsSnapshot.forEach((ref, index) => {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -22,14 +25,17 @@ const JoinUs = () => {
 
       if (ref.current) {
         observer.observe(ref.current);
+        observers.push(observer);
       }
-
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
     });
+
+    return () => {
+      refsSnapshot.forEach((ref, index) => {
+        if (ref.current) {
+          observers[index]?.unobserve(ref.current);
+        }
+      });
+    };
   }, [controls]);
 
   return (
@@ -37,7 +43,7 @@ const JoinUs = () => {
       <JoinusI />
 
       <div className="w-full lg:px-32 pb-32 px-7">
-        <section ref={sectionRefs[0]} className="text-center space-y-8">
+        <section ref={sectionRefs.current[0]} className="text-center space-y-8">
           <h2 className="text-2xl font-bold text-btncolor">Benefits & Perks</h2>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -51,15 +57,15 @@ const JoinUs = () => {
             }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {/* Benefits Cards */}
-            <div className="bg-white p-6 rounded-md shadow-md text-center  transition duration-300">
+            {/* Cards */}
+            <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Flexible Work Hours</h4>
               <p>
                 Enjoy a balanced lifestyle with schedules tailored to ensure
                 your productivity and well-being.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-md shadow-md text-center    transition duration-300">
+            <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Health Insurance</h4>
               <p>
                 Comprehensive health coverage plans for employees and their
@@ -77,8 +83,8 @@ const JoinUs = () => {
         </section>
       </div>
 
-      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50 ">
-        <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white ">
+      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50">
+        <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white">
           <h2 className="text-xl font-bold text-btncolor text-center">
             Let’s work together
           </h2>
