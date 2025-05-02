@@ -1,65 +1,63 @@
-"use client"
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const HeroAbout = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-between overflow-hidden px-6 bg-black text-white">
-      {/* Left Content */}
+    <section className="w-full min-h-[100svh] flex items-center justify-center px-4 md:px-12 py-24 bg-white text-center">
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        className="z-10 max-w-xl"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+        className="max-w-5xl"
       >
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-          Get it done in
-          <br />
-          <span className="bg-gradient-to-r from-red-500 via-white to-red-500 bg-clip-text text-transparent">
-            One Unified
-          </span>{" "}
-          Workspace.
-        </h1>
-        <p className="mt-6 text-gray-300 text-lg">
-          We craft powerful websites, mobile apps, and digital strategies to transform your business into a tech-driven success.
-        </p>
-        <div className="mt-8 flex gap-4">
-          <input
-            type="email"
-            placeholder="Your email"
-            className="px-4 py-3 rounded-full bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105">
-            Get Started
+        {/* Heading */}
+        <motion.h2
+          variants={{
+            hidden: { opacity: 0, y: -30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-snug mb-8"
+        >
+          Transforming ideas into reality with <br />
+          <span className="text-red-500">Maanc Technologies</span>
+        </motion.h2>
+
+        {/* Subtext */}
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-6 text-lg md:text-2xl text-gray-700 font-medium max-w-3xl mx-auto leading-relaxed"
+        >
+          <span className="text-red-500 font-semibold">Maanc Technologies</span> is dedicated to helping businesses unlock their full potential with expert IT consulting.
+        </motion.p>
+
+        {/* CTA Button */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, scale: 0.95 },
+            visible: { opacity: 1, scale: 1 },
+          }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12"
+        >
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105">
+            Let’s Talk
           </button>
-        </div>
+        </motion.div>
       </motion.div>
-
-      {/* Right Floating Device Preview */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 hidden md:block"
-      >
-        <Image
-          src="/heroabout.png"
-          alt="Maanc Technology Preview"
-          width={600}
-          height={400}
-          className="drop-shadow-[0_20px_40px_rgba(255,255,255,0.1)]"
-          priority
-        />
-      </motion.div>
-
-      {/* Abstract Background Ellipses */}
-      <div className="absolute -z-10 w-full h-full top-0 left-0 overflow-hidden">
-        <div className="absolute top-1/4 left-[-10%] w-[400px] h-[400px] bg-red-500 rounded-full blur-[150px] opacity-30 animate-pulse" />
-        <div className="absolute top-[60%] right-[-10%] w-[500px] h-[500px] bg-white rounded-full blur-[200px] opacity-10 animate-pulse" />
-        <div className="absolute top-[20%] right-[20%] w-[300px] h-[300px] bg-red-500 rounded-full blur-[150px] opacity-20 animate-pulse" />
-      </div>
     </section>
   );
 };
