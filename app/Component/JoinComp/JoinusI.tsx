@@ -7,9 +7,7 @@ const JoinusI = () => {
     <>
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 ">
         {/* Combined Section */}
-        <section
-          className="flex flex-col justify-center items-center text-center space-y-8 h-auto lg:h-[100svh] m-auto lg:m-0 gap-5 py-20"
-        >
+        <section className="flex flex-col justify-center items-center text-center space-y-8 h-auto lg:h-[100svh] m-auto lg:m-0 gap-5 py-20">
           {/* Title and Button */}
           <div className="space-y-5 sm:space-y-7">
             <motion.h1
@@ -37,7 +35,7 @@ const JoinusI = () => {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-5 sm:gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group px-5 cursor-pointer"
+              className="w-full sm:w-72 md:w-80 h-48 md:h-56 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group px-4 cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-semibold text-black group-hover:text-white">
                 About
@@ -48,7 +46,7 @@ const JoinusI = () => {
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="w-full sm:w-80 md:w-96 h-56 md:h-64 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group cursor-pointer"
+              className="w-full sm:w-72 md:w-80 h-48 md:h-56 border-2 border-btncolor rounded-2xl flex flex-col items-center justify-center text-center shadow-md bg-white transition duration-300 hover:bg-btncolor group cursor-pointer"
             >
               <h3 className="text-base sm:text-lg font-semibold text-black group-hover:text-white">
                 Values
