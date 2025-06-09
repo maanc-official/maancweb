@@ -1,8 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,  // Disable image optimization
     remotePatterns: [
       {
         protocol: 'https',
