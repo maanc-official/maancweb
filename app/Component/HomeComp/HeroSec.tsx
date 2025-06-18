@@ -14,7 +14,7 @@ const HeroSec = () => {
       
     },
     {
-      text: "Technology",
+      text: "Technologies",
       className:"text-3xl md:text-[36px] lg:text-[60px] font-extrabold", 
      
       
