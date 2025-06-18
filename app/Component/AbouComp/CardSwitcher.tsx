@@ -22,7 +22,7 @@ const CardSwitcher = () => {
       icon: "🍁",
       summary: "Empowering people through smart, scalable solutions.",
       fullText:
-        "At MAANC Technology, we believe in the power of innovation, collaboration, and purpose-driven digital transformation. In a rapidly evolving technological landscape, our core belief is simple: technology should empower people, solve real-world challenges, and create lasting impact. We are not just builders of software; we are partners in progress—dedicated to delivering solutions that are smart, scalable, and deeply aligned with our clients' goals.",
+        "At SANAD Technology, we believe in the power of innovation, collaboration, and purpose-driven digital transformation. In a rapidly evolving technological landscape, our core belief is simple: technology should empower people, solve real-world challenges, and create lasting impact. We are not just builders of software; we are partners in progress—dedicated to delivering solutions that are smart, scalable, and deeply aligned with our clients' goals.",
     },
     work: {
       heading: "How we work",

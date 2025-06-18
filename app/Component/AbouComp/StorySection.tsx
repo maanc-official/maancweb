@@ -49,10 +49,10 @@ const StorySection = () => {
           className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed space-y-8"
         >
           <p>
-            <span className="text-red-500 font-semibold">Maanc Technologies</span> is dedicated to helping businesses unlock their full potential with expert IT consulting and innovative software solutions. We partner with clients to streamline processes, boost efficiency, and accelerate growth.
+            <span className="text-btncolor font-semibold">Sanad Technologies</span> is dedicated to helping businesses unlock their full potential with expert IT consulting and innovative software solutions. We partner with clients to streamline processes, boost efficiency, and accelerate growth.
           </p>
           <p>
-            <span className="text-red-500 font-semibold">Maanc Technologies</span> is committed to delivering tailored software and infrastructure solutions. Our goal is to empower businesses to evolve with confidence and clarity in today’s tech-driven world.
+            <span className="text-btncolor font-semibold">Sanad Technologies</span> is committed to delivering tailored software and infrastructure solutions. Our goal is to empower businesses to evolve with confidence and clarity in today’s tech-driven world.
           </p>
         </motion.div>
       </motion.div>

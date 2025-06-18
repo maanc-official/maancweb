@@ -46,7 +46,7 @@ export default function App() {
 
         {/* Logo (Hidden on Mobile) */}
         <NavbarBrand className="hidden sm:block">
-          <p className="font-bold text-inherit">Maanc Technology</p>
+          <p className="font-bold text-inherit">Sanad Technologies</p>
         </NavbarBrand>
       </div>
 
@@ -93,7 +93,7 @@ export default function App() {
       variants={fadeInUp}
       className="hidden sm:flex justify-between items-center w-full">
         <NavbarBrand>
-          <p className="font-bold text-inherit">Maanc Technology</p>
+          <p className="font-bold text-inherit">Sanad Technologies</p>
         </NavbarBrand>
 
         {/* <NavbarContent className="flex gap-4">

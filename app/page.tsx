@@ -25,5 +25,5 @@ export default function Home() {
   );
 }
 export const metadata = {
-  title: 'Maanc Technology',
+  title: 'Sanad Technologies',
 };

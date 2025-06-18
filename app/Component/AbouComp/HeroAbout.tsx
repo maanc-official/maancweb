@@ -29,7 +29,7 @@ const HeroAbout = () => {
           className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-snug mb-8"
         >
           Transforming ideas into reality with <br />
-          <span className="text-red-500">Maanc Technologies</span>
+          <span className="text-btncolor">Sanad Technologies</span>
         </motion.h2>
 
         {/* Subtext */}
@@ -41,7 +41,7 @@ const HeroAbout = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 text-lg md:text-2xl text-gray-700 font-medium max-w-3xl mx-auto leading-relaxed"
         >
-          <span className="text-red-500 font-semibold">Maanc Technologies</span> is dedicated to helping businesses unlock their full potential with expert IT consulting.
+          <span className="text-btncolor font-semibold">Sanad Technologies</span> is dedicated to helping businesses unlock their full potential with expert IT consulting.
         </motion.p>
 
         {/* CTA Button */}
@@ -53,7 +53,7 @@ const HeroAbout = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12"
         >
-          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105">
+          <button className="bg-btncolor hover:bg-btncolor text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105">
             Let’s Talk
           </button>
         </motion.div>

@@ -25,19 +25,19 @@ const TestimonialCarousel = () => {
 
   const testimonials = [
     {
-      text: "Working with Maanc Technologies has been transformative for our business. Their team quickly understood our unique challenges and provided innovative, customized solutions that exceeded our expectations. From seamless integration to ongoing support, they made the entire process smooth and stress-free. Our productivity has increased, and we’re seeing real results. Highly recommend them for any business looking to take their technology to the next level!",
+      text: "Working with Sanad Technologies has been transformative for our business. Their team quickly understood our unique challenges and provided innovative, customized solutions that exceeded our expectations. From seamless integration to ongoing support, they made the entire process smooth and stress-free. Our productivity has increased, and we’re seeing real results. Highly recommend them for any business looking to take their technology to the next level!",
       name: "Alex P.",
       position: "COO",
       company: "TechNova Solutions",
     },
     {
-      text: "Maanc Technologies delivered exceptional results for our project. Their expertise in web development and commitment to meeting our deadlines ensured that we launched on time and on budget. Their team is professional, responsive, and a pleasure to work with.",
+      text: "Sanad Technologies delivered exceptional results for our project. Their expertise in web development and commitment to meeting our deadlines ensured that we launched on time and on budget. Their team is professional, responsive, and a pleasure to work with.",
       name: "Samantha L.",
       position: "Project Manager",
       company: "NextGen Tech",
     },
     {
-      text: "The AI and machine learning solutions provided by Maanc Technologies have completely transformed our operations. Their insights and tools have helped us automate processes, saving us both time and money. Truly a game changer!",
+      text: "The AI and machine learning solutions provided by Sanad Technologies have completely transformed our operations. Their insights and tools have helped us automate processes, saving us both time and money. Truly a game changer!",
       name: "John D.",
       position: "CEO",
       company: "Innovate AI",

@@ -31,7 +31,7 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        btncolor: '#FF5151',
+        btncolor: '#57BFFF',
       },
       boxShadow: {
         'custom-inner': 'inset 2.78px 2.78px 3.06px rgba(0, 0, 0, 0.25)',

@@ -42,7 +42,7 @@ const Whoweare: React.FC = () => {
           <Image
             className="rounded-md w-full h-auto object-cover"
             src="https://theforage.wpengine.com/wp-content/uploads/2022/09/tech-companies.jpg"
-            alt="MAANC Technology team"
+            alt="SANAD Technology team"
             width={1104}
             height={640}
             layout="responsive"
@@ -52,7 +52,7 @@ const Whoweare: React.FC = () => {
           <Image
             className="rounded-md w-full h-auto object-cover"
             src="https://www.coworker.com/mag/wp-content/uploads/2018/04/1104x777-1104x640.png"
-            alt="MAANC Technology team"
+            alt="SANAD Technology team"
             width={1104}
             height={640}
             layout="responsive"

@@ -9,7 +9,7 @@ import {TypewriterEffectSmooth} from "@/app/Component/TypeWriter"
 const HeroSec = () => {
   const words = [
     {
-      text: "Maanc",
+      text: "Sanad",
       className:"text-btncolor text-3xl md:text-[36px] lg:text-[60px] font-extrabold ",
       
     },
@@ -63,7 +63,7 @@ const HeroSec = () => {
               ease:"easeInOut"
             }}
             className="text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
-              Maanc Technologies is dedicated to helping businesses unlock their
+              Sanad Technologies is dedicated to helping businesses unlock their
               full potential with expert IT consulting and innovative software
               solutions. We partner with clients to streamline processes, boost
               efficiency, and accelerate growth.
@@ -99,7 +99,7 @@ const HeroSec = () => {
             {/* <Image
               className="object-contain"
               src="/Maancnewlogo.png"
-              alt="maanc logo"
+              alt="Sanad logo"
               width={200} // Adjusted for mobile
               height={200} // Adjusted for mobile
               sizes="(max-width: 768px) 150px, 

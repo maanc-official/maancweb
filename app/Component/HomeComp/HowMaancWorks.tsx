@@ -17,7 +17,7 @@ const HowMaancWorks: React.FC = () => {
       className: "text-3xl md:text-4xl font-bold lg:text-5xl",
     },
     {
-      text: "Maanc",
+      text: "Sanad",
       className: "text-btncolor text-3xl md:text-4xl font-bold lg:text-5xl",
     },
     {

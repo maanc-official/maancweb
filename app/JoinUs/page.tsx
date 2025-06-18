@@ -110,7 +110,7 @@ const JoinUs = () => {
                   type="email"
                   id="email"
                   required
-                  placeholder="info.maanc@gmail.com"
+                  placeholder="info.sanad@gmail.com"
                   className="border p-2 rounded-md w-full shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
                 />
               </div>

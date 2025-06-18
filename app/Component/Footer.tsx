@@ -46,13 +46,13 @@ const Footer = () => {
               <Image
                 className="object-contain"
                 src="/Maancnewlogo.png"
-                alt="maanc logo"
+                alt="sanad logo"
                 width={200}
                 height={200}
                 sizes="(max-width: 768px) 150px, (max-width: 1024px) 200px, 250px"
               />
             </div>
-            <span className="text-xl font-bold">Maanc Technology</span>
+            <span className="text-xl font-bold">Sanad Technologies</span>
           </div>
           <p className="mt-4 text-sm">
             Delivering innovative IT solutions for your business needs.
@@ -95,7 +95,7 @@ const Footer = () => {
         <motion.div variants={fadeInUp} className="flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="text-btncolor text-sm">
-            Email: info.maanc@gmail.com
+            Email: info.sanad@gmail.com
             <br />
             Phone: +91 9608923255
             <br />
@@ -108,7 +108,7 @@ const Footer = () => {
         variants={fadeInUp}
         className="border-t border-gray-700 mt-8 pt-8 text-center text-sm"
       >
-        <span className="text-btncolor">©</span> {new Date().getFullYear()} Maanc. All rights reserved.
+        <span className="text-btncolor">©</span> {new Date().getFullYear()} Sanad. All rights reserved.
       </motion.div>
     </motion.footer>
   );
