@@ -6,10 +6,16 @@ import JoinusI from "../Component/JoinComp/JoinusI";
 const JoinUs = () => {
   const controls = useAnimation();
   const sectionRefs = useRef([useRef(null), useRef(null), useRef(null)]);
+  const formRef = useRef(null); // 👈 Scroll target
+
+  // Scroll handler for the button
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const refsSnapshot = sectionRefs.current;
-    const observers: IntersectionObserver[] = [];
+    const observers = [];
 
     refsSnapshot.forEach((ref, index) => {
       const observer = new IntersectionObserver(
@@ -40,7 +46,7 @@ const JoinUs = () => {
 
   return (
     <>
-      <JoinusI />
+      <JoinusI scrollToForm={scrollToForm} />
 
       <div className="w-full lg:px-32 pb-32 px-7">
         <section ref={sectionRefs.current[0]} className="text-center space-y-8">
@@ -57,37 +63,25 @@ const JoinUs = () => {
             }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {/* Cards */}
             <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Flexible Work Hours</h4>
-              <p>
-                Enjoy a balanced lifestyle with schedules tailored to ensure
-                your productivity and well-being.
-              </p>
+              <p>Enjoy a balanced lifestyle with schedules tailored to ensure your productivity and well-being.</p>
             </div>
             <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Health Insurance</h4>
-              <p>
-                Comprehensive health coverage plans for employees and their
-                families.
-              </p>
+              <p>Comprehensive health coverage plans for employees and their families.</p>
             </div>
             <div className="bg-white p-6 rounded-md shadow-md text-center transition duration-300">
               <h4 className="font-semibold mb-2">Career Growth</h4>
-              <p>
-                Opportunities to enhance skills and progress professionally
-                through training and mentorship.
-              </p>
+              <p>Opportunities to enhance skills and progress professionally through training and mentorship.</p>
             </div>
           </motion.div>
         </section>
       </div>
 
-      <div className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50">
+      <div ref={formRef} className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50">
         <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white">
-          <h2 className="text-xl font-bold text-btncolor text-center">
-            Let’s work together
-          </h2>
+          <h2 className="text-xl font-bold text-btncolor text-center">Let’s work together</h2>
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>

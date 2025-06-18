@@ -87,7 +87,7 @@ const HeroSec = () => {
               <Button
                 className="bg-btncolor rounded-lg text-white lg:py-6 lg:px-6 md:py-5 md:px-5 py-4 px-4  text-[14px] md:text-[16px] lg:text-[18px] "
                 as={Link}
-                href="/contactUs"
+                href="/ContactUs"
               >
                 Let&apos;s Talk
               </Button>

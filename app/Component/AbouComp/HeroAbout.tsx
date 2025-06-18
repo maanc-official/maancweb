@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const HeroAbout = () => {
   return (
@@ -53,9 +54,13 @@ const HeroAbout = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12"
         >
-          <button className="bg-btncolor hover:bg-btncolor text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105">
+          <Link href={"/ContactUs"} className="inline-block">
+          <button 
+          className="bg-btncolor hover:bg-btncolor text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl transition-all duration-300 hover:scale-105">
             Let’s Talk
           </button>
+          
+          </Link>
         </motion.div>
       </motion.div>
     </section>

@@ -147,7 +147,7 @@ export default function App() {
             <Button
               className="bg-btncolor rounded-md text-white py-2 text-[20px]"
               as={Link}
-              href="/contactUs"
+              href="/ContactUs"
             >
               Let&apos;s Talk
             </Button>
