@@ -1,61 +1,29 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import JoinusI from "../Component/JoinComp/JoinusI";
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import JoinusI from '../Component/JoinComp/JoinusI';
 
 const JoinUs = () => {
   const controls = useAnimation();
-  const sectionRefs = useRef([useRef(null), useRef(null), useRef(null)]);
-  const formRef = useRef(null); // 👈 Scroll target
+  const formRef = useRef<HTMLDivElement | null>(null);
 
-  // Scroll handler for the button
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: "smooth" });
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    const refsSnapshot = sectionRefs.current;
-    const observers = [];
-
-    refsSnapshot.forEach((ref, index) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              controls.start(`visible-${index}`);
-            }
-          });
-        },
-        { threshold: 1 }
-      );
-
-      if (ref.current) {
-        observer.observe(ref.current);
-        observers.push(observer);
-      }
-    });
-
-    return () => {
-      refsSnapshot.forEach((ref, index) => {
-        if (ref.current) {
-          observers[index]?.unobserve(ref.current);
-        }
-      });
-    };
-  }, [controls]);
 
   return (
     <>
       <JoinusI scrollToForm={scrollToForm} />
 
       <div className="w-full lg:px-32 pb-32 px-7">
-        <section ref={sectionRefs.current[0]} className="text-center space-y-8">
+        <section className="text-center space-y-8">
           <h2 className="text-2xl font-bold text-btncolor">Benefits & Perks</h2>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={controls}
             variants={{
-              ["visible-0"]: {
+              ['visible-0']: {
                 opacity: 1,
                 x: 0,
                 transition: { duration: 0.8 },
@@ -79,7 +47,11 @@ const JoinUs = () => {
         </section>
       </div>
 
-      <div ref={formRef} className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50">
+      {/* Form Section */}
+      <div
+        ref={formRef}
+        className="flex flex-col px-4 md:px-16 lg:px-32 py-20 space-y-16 bg-gray-50"
+      >
         <section className="w-full md:w-2/3 lg:w-[65%] mx-auto space-y-6 shadow-lg p-6 rounded-md bg-white">
           <h2 className="text-xl font-bold text-btncolor text-center">Let’s work together</h2>
           <form className="space-y-4">

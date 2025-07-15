@@ -25,42 +25,42 @@ const InfoCards = () => {
       title: "Web Development",
       description:
         "Build robust and scalable websites tailored to your business needs using cutting-edge technologies.",
-      icon: "/web.svg", // Replace with the actual path to the icon
+      icon: "/web.png", // Replace with the actual path to the icon
       link: "https://stripe.com",
     },
     {
       title: "Mobile Application",
       description:
         "Create user-friendly mobile apps for Android and iOS platforms that provide seamless experiences.",
-      icon: "/mobileapp.svg", // Replace with the actual path to the icon
+      icon: "/appdev.png", // Replace with the actual path to the icon
       link: "https://netflix.com",
     },
     {
       title: "Digital Marketing",
       description:
         "Enhance your online presence and drive traffic with our strategic digital marketing solutions.",
-      icon: "/dm.svg", // Replace with the actual path to the icon
+      icon: "/digim.png", // Replace with the actual path to the icon
       link: "https://google.com",
     },
     {
       title: "CRM",
       description:
         "Streamline your customer relationships with powerful and intuitive CRM solutions.",
-      icon: "/crm.svg", // Replace with the actual path to the icon
+      icon: "/crmlat.png", // Replace with the actual path to the icon
       link: "https://meta.com",
     },
     {
       title: "Graphics Designing",
       description:
         "Bring your ideas to life with stunning and innovative graphic designs that captivate your audience.",
-      icon: "/gd.svg", // Replace with the actual path to the icon
+      icon: "/desgn.png", // Replace with the actual path to the icon
       link: "https://amazon.com",
     },
     {
       title: "AI & ML",
       description:
         "Leverage the power of Artificial Intelligence and Machine Learning to automate and innovate.",
-      icon: "/ai.svg", // Replace with the actual path to the icon
+      icon: "/ai.png", // Replace with the actual path to the icon
       link: "https://microsoft.com",
     },
   ];

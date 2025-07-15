@@ -82,7 +82,7 @@ const BentoGrid = () => {
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
           >
-            <FaRocket className="w-24 h-24 opacity-20" color="#ff5151" />
+            <FaRocket className="w-24 h-24 opacity-20" color="#57BFFF" />
           </motion.div>
           <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold  mb-4 text-black"><span className="text-btncolor">Innovating</span> the Future of Technology</h1>
@@ -100,7 +100,7 @@ const BentoGrid = () => {
             animate={{ rotate: -360 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
-            <FaLightbulb className="w-20 h-20 opacity-20" color="#ff5151" />
+            <FaLightbulb className="w-20 h-20 opacity-20" color="#57BFFF" />
           </motion.div>
           <h2 className="text-3xl font-bold mb-4">15+ Years</h2>
           <p className="">Of Digital Excellence</p>
@@ -134,7 +134,7 @@ const BentoGrid = () => {
             animate={{ rotate: 360, scale: [1, 1.1, 1] }}
             transition={{ duration: 20, repeat: Infinity }}
           >
-            <FaRocket className="w-24 h-24 opacity-20" color="#ff5151" />
+            <FaRocket className="w-24 h-24 opacity-20" color="#57BFFF" />
           </motion.div>
         </motion.div>
         <motion.div
@@ -164,7 +164,7 @@ const BentoGrid = () => {
             animate={{ rotate: -360 }}
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           >
-            <FaLightbulb className="w-24 h-24 opacity-20" color="#ff5151"/> 
+            <FaLightbulb className="w-24 h-24 opacity-20" color="#57BFFF"/> 
           </motion.div>
         </motion.div>
 
