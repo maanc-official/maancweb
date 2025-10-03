@@ -56,7 +56,7 @@ const MeetingForm: React.FC = () => {
 
     const selectedDate = new Date(formData.timeSlot);
     const now = new Date();
-    now.setDate(now.getDate() + 1); // Set to one day later from the current date
+    now.setDate(now.getDate() + 1);
 
     if (!formData.timeSlot.trim() || selectedDate < now) {
       newErrors.timeSlot =
@@ -84,11 +84,27 @@ const MeetingForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // ✅ Modified handleSubmit to send data to backend
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("Form Submitted:", formData);
-      // Add your form submission logic here
+    if (!validateForm()) return;
+
+    try {
+      const response = await fetch("https://6p0ovclvf1.execute-api.us-east-1.amazonaws.com/test/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        handleClear();
+      } else {
+        alert("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Try again later.");
     }
   };
 
@@ -100,6 +116,7 @@ const MeetingForm: React.FC = () => {
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Name */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Name <span className="text-btncolor">*</span>
@@ -119,6 +136,8 @@ const MeetingForm: React.FC = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>
               )}
             </div>
+
+            {/* Email */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Email <span className="text-btncolor">*</span>
@@ -131,13 +150,15 @@ const MeetingForm: React.FC = () => {
                 placeholder="JohnDoe@gmail.com"
                 className={`w-full p-2 border ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } rounded-md  focus:ring-black focus:border-black focus:outline-none`}
+                } rounded-md focus:ring-black focus:border-black focus:outline-none`}
                 required
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
+
+            {/* Phone */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Phone <span className="text-btncolor">*</span>
@@ -157,6 +178,8 @@ const MeetingForm: React.FC = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
+
+            {/* Time Slot */}
             <div>
               <label className="block text-sm font-medium mb-1">
                 Time Slot <span className="text-btncolor">*</span>
@@ -172,13 +195,15 @@ const MeetingForm: React.FC = () => {
                 required
                 min={new Date(Date.now() + 24 * 60 * 60 * 1000)
                   .toISOString()
-                  .slice(0, 16)} // Dynamically set the minimum date/time
+                  .slice(0, 16)}
               />
               {errors.timeSlot && (
                 <p className="text-red-500 text-sm mt-1">{errors.timeSlot}</p>
               )}
             </div>
           </div>
+
+          {/* Requirements */}
           <div>
             <label className="block text-sm font-medium mb-1">
               Tell us about your requirement
@@ -192,6 +217,8 @@ const MeetingForm: React.FC = () => {
               rows={4}
             ></textarea>
           </div>
+
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-4">
             <button
               type="button"
